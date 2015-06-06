@@ -7,7 +7,7 @@ import os
 import omdb
 from titlecase import titlecase
 import logging
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 logging.getLogger("requests").setLevel(logging.WARNING)
 logger = logging.getLogger("movie-renamer")
 
@@ -16,6 +16,7 @@ ALLOW_CASE_INSENSITIVE_WORDS = True
 IGNORE_CASE_WORDS = ['of', 'a', 'the', 'and', 'an', 'or', 'nor', 'but', 'is', 'if', 'then', 'else', 'when',
                      'at', 'from', 'by', 'on', 'off', 'for', 'in', 'out', 'over', 'to', 'into', 'with']
 SINGLE_LETTER_WORDS = ['i', 'a']
+
 
 # compares strings but ignores case in some cases
 def compare_movie_title(original, new):
